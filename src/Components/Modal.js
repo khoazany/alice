@@ -30,21 +30,36 @@ export default class AppsScreen extends Component<Props> {
               <Text style={{fontFamily: 'Menlo-Regular', fontSize: 17}}>App</Text>
             </View>
             <View style={{width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'flex-start', marginBottom: 15}}>
-              <Image source={require('../../Assets/radar-black.png')} style={{resizeMode: 'contain', height: 20, width: 20}}/>
-              <Text style={{fontFamily: 'Menlo-Regular', fontSize: 17}}> RELAY</Text>
+              {this.props.app === "ethereum" ?
+                <Image source={require('../../Assets/localethereum.png')} style={{resizeMode: 'contain', height: 20, width: 20}}/> :
+                <Image source={require('../../Assets/radar-black.png')} style={{resizeMode: 'contain', height: 20, width: 20}}/>
+              }
+              {this.props.app === "ethereum" ?
+                <Text style={{fontFamily: 'Menlo-Regular', fontSize: 17}}> LocalEthereum</Text> :
+                <Text style={{fontFamily: 'Menlo-Regular', fontSize: 17}}> RELAY</Text>
+              }
             </View>
             <View style={{width: '100%', alignItems: 'flex-start', justifyContent: 'center', marginBottom: 8}}>
               <Text style={{fontFamily: 'Menlo-Regular', fontSize: 17}}>Asset</Text>
             </View>
             <View style={{width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'flex-start', marginBottom: 15}}>
-              <Image source={require('../../Assets/status-logo.png')} style={{resizeMode: 'contain', height: 20, width: 20}}/>
-              <Text style={{fontFamily: 'Menlo-Regular', fontSize: 17}}>Status Tokens</Text>
+              {this.props.app === "ethereum" ?
+                <Image source={require('../../Assets/ethereum.png')} style={{resizeMode: 'contain', height: 20, width: 20, marginRight: 5}}/> :
+                <Image source={require('../../Assets/status-logo.png')} style={{resizeMode: 'contain', height: 20, width: 20, marginRight: 5}}/>
+              }
+              {this.props.app === "ethereum" ?
+                <Text style={{fontFamily: 'Menlo-Regular', fontSize: 17}}>Ethereum</Text> :
+                <Text style={{fontFamily: 'Menlo-Regular', fontSize: 17}}>Status Tokens</Text>
+              }
             </View>
             <View style={{width: '100%', alignItems: 'flex-start', justifyContent: 'center', marginBottom: 8}}>
               <Text style={{fontFamily: 'Menlo-Regular', fontSize: 17}}>Amount</Text>
             </View>
             <View style={{width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'flex-start', marginBottom: 20}}>
-              <Text style={{fontFamily: 'Menlo-Regular', fontSize: 17}}>10000 SNT</Text>
+              {this.props.app === "ethereum" ?
+                <Text style={{fontFamily: 'Menlo-Regular', fontSize: 17}}>1 ETH</Text> :
+                <Text style={{fontFamily: 'Menlo-Regular', fontSize: 17}}>10000 SNT</Text>
+              }
             </View>
             <View style={{width: '100%', alignItems: 'center', justifyContent: 'center'}}>
               <TouchableOpacity onPress={this.props.closeModal} style={{ width: width - 40, height: 50, backgroundColor: '#0077eb', borderRadius: 10, flexDirection: 'row', alignItems: 'center', justifyContent: 'center', marginBottom: 15}}>

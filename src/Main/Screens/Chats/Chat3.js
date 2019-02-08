@@ -73,7 +73,7 @@ export default class ChatScreen extends Component<Props> {
                 <Text>Cool, I'll send the request</Text>
               </View>
               <TouchableWithoutFeedback onPress={this.placeOrder}>
-                <Image source={require('../../../../Assets/radar-chat.png')} style={{flex: 1, resizeMode: 'contain', height: 220, width: width - 50, padding: 8, marginRight: 20, marginBottom: 5, marginTop: 5}}/>
+                <Image source={require('../../../../Assets/localethereum-modal.png')} style={{height: 190, resizeMode: 'contain', width: width - 50, padding: 8, marginRight: 20, marginBottom: 5, marginTop: 5}}/>
               </TouchableWithoutFeedback>
               <View style={{width: width - 50, padding: 8, marginLeft: 20, marginRight: 5, backgroundColor: '#6024ce', borderRadius: 5, marginBottom: 5, marginTop: 5 }}>
                 <Text style={{color: 'white'}}>Thanks for meeting up, really appreciate it</Text>

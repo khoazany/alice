@@ -16,7 +16,7 @@ export default class AppsScreen extends Component<Props> {
 
   render() {
     return (
-      <TouchableWithoutFeedback onPress={Keyboard.dismiss()}>
+      <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <View style={styles.container}>
           <TextInput placeholder='Search' style={{width: '100%', backgroundColor: '#848484', borderRadius: 10, height: 35, paddingLeft: 10, marginBottom: 10}}/>
           <Text style={{color: 'white', fontSize: 25}}>Apps</Text>
